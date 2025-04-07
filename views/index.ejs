@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-items">
+      <div class="text-side">
+        <div class="h1Container">
+          <h1>Write <span>Instantly.</span></h1>
+          <h1>Share Your Voice.</h1>
+        </div>
+        <p>No signup, no hassle—just start writing and let your thoughts flow. Publish your blog in seconds!</p>
+        <form action="/create" method="GET">
+          <button class="confirm-btn hero-btn" type="submit">Create Your Blog</button>
+        </form>
+      </div>
+      <div class="hero-img">
+        <figure>
+          <img src="/images/blog-hero.png" alt="hero image">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<%- include("partials/footer.ejs") %>

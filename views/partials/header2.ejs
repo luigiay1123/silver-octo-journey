@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instant Blog</title>
+  <link rel="icon" type="image/x-icon" href="/images/Favicon.png">
+  <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+<body>
+  
+  <nav class="headnav">
+    <div class="container">
+      <div class="nav-contents">
+        <form 
+          <% if (posts.length !== 0) { %>
+          action="/view" 
+          <% } else { %>
+          action="/"
+          <% } %>
+          method="GET">
+          <button class="home-btn" type="submit"><img src="/images/logo.png" alt="instant blog logo"></button>
+        </form>
+        <button id="submitPost" class="confirm-btn" type="submit">Publish</button>
+      </div>
+    </div>
+  </nav>

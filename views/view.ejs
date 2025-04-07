@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+<ul class="view-section">
+  <% posts.forEach(post => { %>
+    <li class="blog-topic">
+      <h2><%= post.title %></h2>
+      <pre><%= post.content.substring(0,175) %>...</pre>
+      <nav>
+        <form action="/edit/<%= post.id%>" method="get">
+          <button type="submit"><img src="/images/edit-btn.png" alt="edit icon"></button>
+        </form>  
+        <form action="/delete/<%= post.id%>" method="post">
+          <button type="submit"><img src="/images/delete-btn.png" alt="edit icon"></button>
+        </form>  
+        <form action="/blog/<%= post.id%>" method="get">
+          <button type="submit"><img src="/images/view-btn.png" alt="edit icon"></button>
+        </form>  
+      </nav>
+    </li>
+  <% }); %>
+
+</ul>
+
+
+<%- include("partials/footer.ejs") %>

@@ -1,0 +1,30 @@
+<%- include("partials/header.ejs") %>
+<div class="blog-view">
+
+<nav class="blogSection-nav">
+  <form action="/view" method="get">
+    <button type="submit"><img src="/images/back-btn.png" alt="edit icon"></button>
+  </form> 
+  <div class="blogPost-buttons2">
+    <form action="/edit/<%= post.id%>" method="get">
+      <button type="submit"><img src="/images/edit-btn.png" alt="edit icon"></button>
+    </form>  
+    <form action="/delete/<%= post.id%>" method="post">
+      <button type="submit"><img src="/images/delete-btn.png" alt="edit icon"></button>
+    </form> 
+  </div>
+</nav>
+
+<section class="blog-section">
+  <div class="container">
+    <div class="blogPost">
+      <h3><%= post.title %></h3>
+      <pre><%= post.content %></pre>
+    </div>
+  </div>
+</section>
+
+</div>
+
+
+<%- include("partials/footer.ejs") %>
