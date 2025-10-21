@@ -1,4 +1,4 @@
-# silver-octo-journey
+# Blog Website
 
 this is my simple project of implementing what i've learned from tutorials
 
